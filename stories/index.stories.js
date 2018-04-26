@@ -18,12 +18,15 @@ import React from 'react'
 
 import '../src/base.css'
 
-import { storiesOf } from '@storybook/react'
+import { setAddon, storiesOf } from '@storybook/react'
+import JSXAddon from 'storybook-addon-jsx'
 import { action } from '@storybook/addon-actions'
 import { linkTo } from '@storybook/addon-links'
 
+setAddon(JSXAddon)
+
 storiesOf('button', module)
-  .add('with text', () => <div className="vertical space-children">
+  .addWithJSX('with text', () => <div className="vertical space-children">
     <div className="horizontal space-children">
       <button>Primary</button>
       <button disabled>Disabled</button>
