@@ -16,12 +16,13 @@
 
 import React from 'react'
 
-import '../src/base.css'
-
 import { setAddon, storiesOf } from '@storybook/react'
 import JSXAddon from 'storybook-addon-jsx'
 import { action } from '@storybook/addon-actions'
 import { linkTo } from '@storybook/addon-links'
+
+import '../src/base.css'
+import {Avatar} from '..'
 
 setAddon(JSXAddon)
 
@@ -43,3 +44,55 @@ storiesOf('base.css', module)
       <pre>button.destructive</pre>
     </div>
   </div>)
+
+const noFace = {
+  firstName: 'Jean',
+  lastName: 'Valjean',
+}
+
+const withFace = {
+  firstName: 'Jean',
+  lastName: 'Valjean',
+  image: 'https://images.amcnetworks.com/bbcamerica.com/wp-content/blogs.dir/55/files/2012/12/Hugh-Jackman-Les-Miserables.jpg',  
+}
+
+storiesOf('Components', module)
+  .addWithJSX('Avatar', () => <div className="vertical space-children">
+    <div className="horizontal space-children">
+      <Avatar user={noFace} size={5} units="em" />
+      <Avatar user={noFace} size={3} units="em" />
+      <Avatar user={noFace} size={1} units="em" />
+      <pre>units="em"</pre>
+    </div>
+    <div className="horizontal space-children">
+      <Avatar user={withFace} size={5} units="em" />
+      <Avatar user={withFace} size={3} units="em" />
+      <Avatar user={withFace} size={1} units="em" />
+      <pre>units="em"</pre>
+    </div>
+    <div className="horizontal space-children">
+      <Avatar user={noFace} size={15} units="vh" />
+      <Avatar user={noFace} size={10} units="vh" />
+      <Avatar user={noFace} size={5} units="vh" />
+      <pre>units="vh"</pre>
+    </div>
+    <div className="horizontal space-children">
+      <Avatar user={withFace} size={15} units="vh" />
+      <Avatar user={withFace} size={10} units="vh" />
+      <Avatar user={withFace} size={5} units="vh" />
+      <pre>units="vh"</pre>
+    </div>
+    <div className="horizontal space-children">
+      <Avatar user={noFace} size={100} />
+      <Avatar user={noFace} size={60} />
+      <Avatar user={noFace} size={20} />
+      <pre>units="px"</pre> (default)
+    </div>
+    <div className="horizontal space-children">
+      <Avatar user={withFace} size={100} />
+      <Avatar user={withFace} size={60} />
+      <Avatar user={withFace} size={20} />
+      <pre>units="px"</pre> (default)
+    </div>
+  </div>)
+  
