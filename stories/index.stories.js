@@ -25,8 +25,8 @@ import { linkTo } from '@storybook/addon-links'
 
 setAddon(JSXAddon)
 
-storiesOf('button', module)
-  .addWithJSX('with text', () => <div className="vertical space-children">
+storiesOf('base.css', module)
+  .addWithJSX('button', () => <div className="vertical space-children">
     <div className="horizontal space-children">
       <button>Primary</button>
       <button disabled>Disabled</button>
