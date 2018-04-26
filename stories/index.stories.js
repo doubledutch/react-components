@@ -22,10 +22,6 @@ import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import { linkTo } from '@storybook/addon-links'
 
-import { Button, Welcome } from '@storybook/react/demo'
-
-storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />)
-
 storiesOf('button', module)
   .add('with text', () => <div className="vertical space-children">
     <div className="horizontal space-children">
@@ -44,10 +40,3 @@ storiesOf('button', module)
       <pre>button.destructive</pre>
     </div>
   </div>)
-  .add('with some emoji', () => (
-    <Button onClick={action('clicked')}>
-      <span role="img" aria-label="so cool">
-        😀 😎 👍 💯
-      </span>
-    </Button>
-  ))
