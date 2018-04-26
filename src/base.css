@@ -1,0 +1,84 @@
+html, body {
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+button {
+  font-size: 1em;
+  color: #fff;
+  background-color: #5193dd;
+  padding: 0.7em 1.2em;
+  border-radius: 0.4em;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+button:hover:not(:disabled) {
+  background-image: linear-gradient(rgba(255,255,255,0.14), transparent); 
+}
+button:focus:not(:active) {
+  border: 0.12em solid rgba(0,0,0,0.5);
+  padding: 0.58em 1.08em;
+}
+button:disabled {
+  background-color: #a9caee;
+  border-color: #a9caee;
+  cursor: default;
+}
+button:active {
+  border: 0.12em solid rgba(0,0,0,0.2);
+  border-bottom-color: rgba(0,0,0,0.05);
+  padding: 0.58em 1.08em;
+}
+
+button.secondary {
+  color: #5193dd;
+  background-color: #fff;
+}
+button.secondary:not(:active) {
+  border: 0.06em solid #5193dd;
+  padding: 0.64em 1.14em;
+}
+button.secondary:active {
+  border: 0.12em solid #8db1d9;
+  border-bottom-color: #a4c4e9;
+  padding: 0.58em 1.08em;
+}
+button.secondary:hover:not(:disabled) {
+  background-color: #f6f9fd;
+}
+button.secondary:disabled {
+  color: #aacaee;
+  border-color: #aacaee;
+}
+
+button.destructive {
+  background-color: #dc5053;
+}
+button.destructive:focus:not(:active) {
+  border: 0.12em solid #b5111b;
+  padding: 0.58em 1.08em;
+}
+button.destructive:disabled {
+  background-color: #eda9aa;
+}
+
+pre {
+  margin: 0.6em 0;
+}
+
+.horizontal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.vertical {
+  display: flex;
+  flex-direction: column;
+}
+.horizontal.space-children > :not(:last-child) {
+  margin-right: 1em;
+}
+.vertical.space-children > :not(:last-child) {
+  margin-bottom: 1em;
+}
