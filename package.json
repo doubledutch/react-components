@@ -6,6 +6,7 @@
   "scripts": {
     "start": "npm run storybook",
     "storybook": "start-storybook -p 6006",
+    "deploy-storybook": "storybook-to-ghpages",
     "build-storybook": "build-storybook"
   },
   "keywords": [
@@ -31,6 +32,7 @@
     "@storybook/addon-links": "^3.4.2",
     "@storybook/addons": "^3.4.2",
     "@storybook/react": "^3.4.2",
+    "@storybook/storybook-deployer": "^2.3.0",
     "babel-core": "^6.26.0",
     "babel-runtime": "^6.26.0"
   }
