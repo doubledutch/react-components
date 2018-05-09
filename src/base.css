@@ -1,6 +1,19 @@
-html, body {
+html, body, a {
   font-size: 14px;
   font-family: sans-serif;
+}
+
+a {
+  color: #5193dd;
+}
+
+a:hover {
+  color: #2663AA;
+}
+
+a:focus {
+  color: #2663AA;
+  background-color: #D8D8D8;
 }
 
 button {
