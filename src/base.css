@@ -35,15 +35,6 @@ a:focus {
   background-color: #D8D8D8;
 }
 
-input {
-  border: 1px solid #AAB9CA;
-  border-radius: 4px;
-  background-color: #FFFFFF;
-  height: 43px;
-  width: 325px;
-}
-
-
 
 button {
   font-size: 1em;
