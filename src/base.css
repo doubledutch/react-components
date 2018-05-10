@@ -6,8 +6,8 @@ html, body, a {
 a {
   color: #5193dd;
   text-decoration: none;
-  border-radius: 5px;
-  padding: 2px;
+  border-radius: 0.4em;
+  padding: 0.1em;
 }
 
 a:hover {
