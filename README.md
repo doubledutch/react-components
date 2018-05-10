@@ -13,7 +13,8 @@ Visit the [interactive demo][interactive-demo] powered by
 
 1. Make style or component changes
    - Make CSS changes to [src/base.css](./src/base.css)
-2. Submit a pull request
+2. Observe changes in Storybook: `npm start`   
+3. Submit a pull request
 
 To update the [interactive demo][interactive-demo], run `npm run build-storybook`. Write permissions
 to https://github.com/doubledutch/react-components.
