@@ -44,6 +44,12 @@ storiesOf('base.css', module)
       <pre>button.destructive</pre>
     </div>
   </div>)
+  .addWithJSX('hyperlink', () => <div className="vertical space-children">
+    <div className="horizontal space-children">
+      <a href="https://www.doubledutch.me">Text Link</a>
+      <pre>a</pre>
+    </div>
+  </div>)
 
 const noFace = {
   firstName: 'Jean',
