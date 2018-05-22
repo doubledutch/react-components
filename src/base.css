@@ -23,18 +23,18 @@ a {
   color: #5193dd;
   text-decoration: none;
   border-radius: 0.4em;
-  padding: 0.1em;
+  padding: 0.4em 0.2em;
 }
 
 a:hover {
-  color: #2663AA;
+  color: #2d66a7;
 }
 
 a:focus {
-  color: #2663AA;
-  background-color: #D8D8D8;
+  color: #2d66a7;
+  background-color: #d8d8d8;
+  outline: none;
 }
-
 
 button {
   font-size: 1em;

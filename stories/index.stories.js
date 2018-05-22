@@ -22,7 +22,7 @@ import { action } from '@storybook/addon-actions'
 import { linkTo } from '@storybook/addon-links'
 
 import '../src/base.css'
-import {Avatar} from '..'
+import {Avatar} from '../src'
 
 setAddon(JSXAddon)
 
@@ -44,11 +44,16 @@ storiesOf('base.css', module)
       <pre>button.destructive</pre>
     </div>
   </div>)
-  .addWithJSX('hyperlink', () => <div className="vertical space-children">
-    <div className="horizontal space-children">
-      <a href="https://www.doubledutch.me">Text Link</a>
-      <pre>a</pre>
-    </div>
+  .addWithJSX('Link', () => <div>
+    <a href="https://doubledutch.me">DoubleDutch</a> and&nbsp;
+    <a href="https://google.com">Google</a> and&nbsp;
+    <a href="https://microsoft.com">Microsoft</a>
+  </div>)
+  .addWithJSX('radio', () => <div className="vertical space-children">
+    <label><input type="radio" name="my-radio" /> Option 1</label>
+    <label><input type="radio" name="my-radio" /> Option 2</label>
+    <label><input type="radio" name="my-radio" /> Option 3</label>
+    <label><input type="radio" name="my-radio" disabled /> Disabled</label>
   </div>)
 
 const noFace = {
@@ -101,4 +106,3 @@ storiesOf('Components', module)
       <pre>units="px"</pre> (default)
     </div>
   </div>)
-  
