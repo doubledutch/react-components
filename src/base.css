@@ -131,18 +131,37 @@ label {
   color: #384448;
   padding-bottom: 0.5em;
 }
-label > input[type="text"] {
+label input[type="text"], label textarea {
   margin-top: 0.4em;
 }
-label > input[type="text"] + .instructions {
+label .instructions {
   color: #5d6c7b;
   font-weight: 300;
   margin-top: 0.4em;
 }
-label > input[type="text"] + .error {
+label .error {
   color: #dc5154;
   font-weight: 300;
   margin-top: 0.4em;
+}
+label .input-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+label .input-container input, label .input-container input:focus {
+  padding-right: 3em;
+}
+label .input-char-count, label .input-char-count-capacity {
+  font-size: 1em;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 0.9em;
+  color: #abbac9;
+}
+label .input-char-count-capacity {
+  color: #dc5154;
 }
 
 pre {

@@ -15,3 +15,4 @@
  */
 
 export {default as Avatar} from './Avatar'
+export {TextInput} from './Inputs'

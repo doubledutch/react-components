@@ -23,6 +23,7 @@ import { linkTo } from '@storybook/addon-links'
 
 import '../src/base.css'
 import {Avatar} from '../src'
+import {TextInput} from '../src'
 
 setAddon(JSXAddon)
 
@@ -50,6 +51,7 @@ storiesOf('base.css', module)
     <a href="https://microsoft.com">Microsoft</a>
   </div>)
   .addWithJSX('Inputs', () => <div className="vertical space-children">
+    <p>See also Components/Inputs</p>
     <label>
       Text field label
       <input type="text" placeholder="Text field placeholder" />
@@ -132,5 +134,41 @@ storiesOf('Components', module)
       <Avatar user={withFace} size={60} />
       <Avatar user={withFace} size={20} />
       <pre>units="px"</pre> (default)
+    </div>
+  </div>)
+  .addWithJSX('Inputs', () => <div className="vertical space-children">
+    <div className="horizontal space-children">
+      <TextInput
+        style={{flex:1}}
+        label="Text field label"
+        placeholder="Placeholder"
+        hasError={true}
+        errorText="Input with error"
+        instructions="Instructions"
+      />
+      <pre style={{flex:1}}>&lt;TextInput ... /&gt;</pre>
+    </div>
+    <div className="horizontal space-children">
+      <TextInput
+        style={{flex:1}}
+        label="Field with max length"
+        placeholder="Placeholder"
+        hasError={false}
+        instructions="Max 50 characters"
+        maxLength="80"
+      />
+      <pre style={{flex:1}}>&lt;TextInput maxLength={50} ... /&gt;</pre>
+    </div>
+    <div className="horizontal space-children">
+      <TextInput
+        multiline
+        style={{flex:1}}
+        label="Field with max length"
+        placeholder="Placeholder"
+        hasError={false}
+        instructions="Max 500 characters"
+        maxLength="500"
+      />
+      <pre style={{flex:1}}>&lt;TextInput multiline maxLength={500} ... /&gt;</pre>
     </div>
   </div>)
