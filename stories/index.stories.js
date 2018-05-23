@@ -49,6 +49,20 @@ storiesOf('base.css', module)
     <a href="https://google.com">Google</a> and&nbsp;
     <a href="https://microsoft.com">Microsoft</a>
   </div>)
+  .addWithJSX('Inputs', () => <div className="vertical space-children">
+    <label>
+      Text field label
+      <input type="text" placeholder="Text field placeholder" />
+    </label>
+    <label>
+      Text field label
+      <input type="text" placeholder="Disabled" disabled />
+    </label>
+    <label>
+      Text field label
+      <input type="text" placeholder="Search" className="search" />
+    </label>
+  </div>)
   .addWithJSX('radio', () => <div className="vertical space-children">
     <label><input type="radio" name="my-radio" /> Option 1</label>
     <label><input type="radio" name="my-radio" /> Option 2</label>
