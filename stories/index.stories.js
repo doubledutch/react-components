@@ -56,11 +56,25 @@ storiesOf('base.css', module)
     </label>
     <label>
       Text field label
+      <input type="text" placeholder="Text field placeholder" />
+      <div className="instructions">Text field specific instructions</div>
+    </label>
+    <label>
+      Text field label
+      <input type="text" placeholder="Text field placeholder" value="Invalid input" />
+      <div className="error">Invalid input ist verboten!</div>
+    </label>
+    <label>
+      Text field label
       <input type="text" placeholder="Disabled" disabled />
     </label>
     <label>
       Text field label
       <input type="text" placeholder="Search" className="search" />
+    </label>
+    <label>
+      Text area label
+      <textarea placeholder="Text area placeholder"></textarea>
     </label>
   </div>)
   .addWithJSX('radio', () => <div className="vertical space-children">
