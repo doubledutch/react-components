@@ -25,7 +25,7 @@ See the live [interactive demo][interactive-demo] for individual components and 
 2. Observe changes in Storybook: `npm start`   
 3. Submit a pull request
 
-To update the [interactive demo][interactive-demo], run `npm run build-storybook`. Write permissions
+To update the [interactive demo][interactive-demo], run `npm run deploy-storybook`. Write permissions
 to https://github.com/doubledutch/react-components are required.
 
 [interactive-demo]: https://doubledutch.github.io/react-components
