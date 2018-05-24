@@ -149,8 +149,11 @@ label .input-container {
   flex-direction: column;
   position: relative;
 }
-label .input-container input, label .input-container input:focus {
-  padding-right: 3em;
+label input.with-char-count, label input.with-char-count:focus {
+  padding-right: 2.6em;
+}
+label input.with-icon, label input.with-icon:focus {
+  padding-left: 2.6em;
 }
 label .input-char-count, label .input-char-count-capacity {
   font-size: 1em;

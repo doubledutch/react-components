@@ -155,7 +155,16 @@ storiesOf('Components', module)
         placeholder="Placeholder"
         hasError={false}
         instructions="Max 50 characters"
-        maxLength="80"
+        maxLength="50"
+      />
+      <pre style={{flex:1}}>&lt;TextInput maxLength={50} ... /&gt;</pre>
+    </div>
+    <div className="horizontal space-children">
+      <TextInput
+        style={{flex:1}}
+        placeholder="Search"
+        hasError={false}
+        icon="search"
       />
       <pre style={{flex:1}}>&lt;TextInput maxLength={50} ... /&gt;</pre>
     </div>

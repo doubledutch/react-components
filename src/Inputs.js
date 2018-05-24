@@ -33,18 +33,29 @@ export class TextInput extends PureComponent {
   }
 
   renderInput() {
-    const {maxLength, multiline, placeholder, value} = this.props
+    const {maxLength, multiline, placeholder, icon, value} = this.props
     const renderInputElement = () => multiline
-      ? <textarea ref={this.inputRef} placeholder={placeholder} value={value} onChange={this.onChange} maxLength={maxLength || null} />
-      : <input ref={this.inputRef} type="text" placeholder={placeholder} value={value} onChange={this.onChange} maxLength={maxLength || null} />
+      ? <textarea ref={this.inputRef}
+                  placeholder={placeholder}
+                  value={value}
+                  onChange={this.onChange}
+                  className={`${maxLength > 0 ? ' with-char-count':''}${icon ? ' with-icon':''}`}
+                  maxLength={maxLength || null} />
+      : <input ref={this.inputRef}
+               type="text"
+               placeholder={placeholder}
+               value={value}
+               onChange={this.onChange}
+               className={`${maxLength > 0 ? ' with-char-count':''}${icon ? ' with-icon':''}`}
+               maxLength={maxLength || null} />
 
     if (maxLength) {
       const remaining = maxLength - (value||(this.inputRef.current ? this.inputRef.current.value : '')).length
       return (
         <div className="input-container">
           {renderInputElement()}
-          {maxLength > 0 && <div className={remaining > 0 ? 'input-char-count':'input-char-count-capacity'}>{remaining}</div>}
-        </div>   
+          {maxLength > 0 && <div className={`input-char-count${remaining > 0 ? '':'-capacity'}`}>{remaining}</div>}
+        </div>
       )
     }
     
