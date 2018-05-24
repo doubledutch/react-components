@@ -24,6 +24,9 @@ html, body, a, input, textarea, select, button {
 input, textarea, select {
   color: #333;
 }
+textarea {
+  resize: vertical;
+}
 
 a {
   color: #5193dd;
@@ -162,6 +165,11 @@ label .input-char-count, label .input-char-count-capacity {
   bottom: 0;
   padding: 0.9em;
   color: #abbac9;
+  user-select: none;
+}
+label textarea + .input-char-count, label textarea + .input-char-count-capacity {
+  padding: 0;
+  margin: 0.5em;
 }
 label .input-char-count-capacity {
   color: #dc5154;
