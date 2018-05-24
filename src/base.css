@@ -166,6 +166,13 @@ label .input-char-count, label .input-char-count-capacity {
 label .input-char-count-capacity {
   color: #dc5154;
 }
+label .input-icon {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 1em;
+  color: #abbac9;
+}
 
 pre {
   margin: 0.6em 0;

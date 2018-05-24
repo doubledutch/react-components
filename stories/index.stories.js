@@ -20,6 +20,8 @@ import { setAddon, storiesOf } from '@storybook/react'
 import JSXAddon from 'storybook-addon-jsx'
 import { action } from '@storybook/addon-actions'
 import { linkTo } from '@storybook/addon-links'
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import faSearch from '@fortawesome/fontawesome-free-solid/faSearch'
 
 import '../src/base.css'
 import {Avatar} from '../src'
@@ -164,9 +166,9 @@ storiesOf('Components', module)
         style={{flex:1}}
         placeholder="Search"
         hasError={false}
-        icon="search"
+        icon={({className}) => <FontAwesomeIcon icon={faSearch} className={className} />}
       />
-      <pre style={{flex:1}}>&lt;TextInput maxLength={50} ... /&gt;</pre>
+      <pre style={{flex:1}}>&lt;TextInput maxLength={50} icon={'{...}'} ... /&gt;</pre>
     </div>
     <div className="horizontal space-children">
       <TextInput

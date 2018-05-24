@@ -9,6 +9,15 @@ By using these styles and components, UI can easily match the DoubleDutch look a
 Visit the [interactive demo][interactive-demo] powered by
 [Storybook](https://storybook.js.org/).
 
+## Usage
+
+```javascript
+import '@doubledutch/react-components/lib/base.css' // Get DoubleDutch standard CSS.
+import {Avatar, TextInput} from '@doubledutch/react-components'
+```
+
+See the live [interactive demo][interactive-demo] for individual components and styles.
+
 ## Updating
 
 1. Make style or component changes
@@ -17,6 +26,6 @@ Visit the [interactive demo][interactive-demo] powered by
 3. Submit a pull request
 
 To update the [interactive demo][interactive-demo], run `npm run build-storybook`. Write permissions
-to https://github.com/doubledutch/react-components.
+to https://github.com/doubledutch/react-components are required.
 
 [interactive-demo]: https://doubledutch.github.io/react-components

@@ -49,11 +49,12 @@ export class TextInput extends PureComponent {
                className={`${maxLength > 0 ? ' with-char-count':''}${icon ? ' with-icon':''}`}
                maxLength={maxLength || null} />
 
-    if (maxLength) {
+    if (maxLength || icon) {
       const remaining = maxLength - (value||(this.inputRef.current ? this.inputRef.current.value : '')).length
       return (
         <div className="input-container">
           {renderInputElement()}
+          {icon != null && icon({className: 'input-icon'})}
           {maxLength > 0 && <div className={`input-char-count${remaining > 0 ? '':'-capacity'}`}>{remaining}</div>}
         </div>
       )
