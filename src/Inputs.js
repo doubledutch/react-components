@@ -33,18 +33,22 @@ export class TextInput extends PureComponent {
   }
 
   renderInput() {
-    const {maxLength, multiline, placeholder, icon, value} = this.props
+    const {maxLength, multiline, onBlur, onFocus, placeholder, icon, value} = this.props
     const renderInputElement = () => multiline
       ? <textarea ref={this.inputRef}
                   placeholder={placeholder}
                   value={value}
                   onChange={this.onChange}
+                  onFocus={onFocus}
+                  onBlur={onBlur}
                   className={`${maxLength > 0 ? ' with-char-count':''}${icon ? ' with-icon':''}`}
                   maxLength={maxLength || null} />
       : <input ref={this.inputRef}
                type="text"
                placeholder={placeholder}
                value={value}
+               onFocus={onFocus}
+               onBlur={onBlur}
                onChange={this.onChange}
                className={`${maxLength > 0 ? ' with-char-count':''}${icon ? ' with-icon':''}`}
                maxLength={maxLength || null} />
