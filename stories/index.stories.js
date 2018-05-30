@@ -26,8 +26,11 @@ import faSearch from '@fortawesome/fontawesome-free-solid/faSearch'
 import '../src/base.css'
 import {Avatar} from '../src'
 import {TextInput} from '../src'
+import {AttendeeSelector} from '../src'
 
 setAddon(JSXAddon)
+
+const attendees = [{firstName:'Jean',lastName:'Valjean'},{firstName:'Cosette',lastName:'Pontmercy'},{firstName:'Marius',lastName:'Pontmercy'}]
 
 storiesOf('base.css', module)
   .addWithJSX('button', () => <div className="vertical space-children">
@@ -181,5 +184,18 @@ storiesOf('Components', module)
         maxLength="500"
       />
       <pre style={{flex:1}}>&lt;TextInput multiline maxLength={500} ... /&gt;</pre>
+    </div>
+  </div>)
+  .addWithJSX('Selectors', () => <div className="vertical space-children">
+    <span><pre style={{flex:1}}>&lt;AttendeeSelector ... /&gt;</pre> An attendee-specific wrapper for Selector.</span>
+    <div className="horizontal space-children">
+      <AttendeeSelector
+        client={{getAttendees: () => Promise.resolve(attendees)}}
+        searchTitle="Select Admins"
+        selectedTitle="Current Admins"
+        onSelected={a => window.alert(`${JSON.stringify(a)} selected. onSelected must update state accordingly.`)}
+        onDeselected={a => window.alert(`${JSON.stringify(a)} deselected. onSelected must update state accordingly.`)}
+        selected={attendees}
+      />
     </div>
   </div>)

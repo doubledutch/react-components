@@ -14,7 +14,18 @@
  * limitations under the License.
  */
 
-export {default as Avatar} from './Avatar'
-export {default as AttendeeSelector} from './AttendeeSelector'
-export {default as Selector} from './Selector'
-export {TextInput} from './Inputs'
+import React, {PureComponent} from 'react'
+import Selector from './Selector'
+
+// Attendee-specific Selector
+export default class AttendeeSelector extends PureComponent {
+  render() {
+    return <Selector selectedTextFn={nameOf}
+                     search={this.search}
+                     {...this.props} />
+  }
+
+  search = query => query ? this.props.client.getAttendees(query) : Promise.resolve([])
+}
+
+const nameOf = attendee => `${attendee.firstName} ${attendee.lastName}`
