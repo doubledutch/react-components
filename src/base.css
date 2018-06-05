@@ -18,7 +18,7 @@ html, body, a, input, textarea, select, button {
   font-size: 14px;
   font-family: sans-serif;
   font-weight: 300;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
 }
 
 input, textarea, select {
@@ -26,6 +26,7 @@ input, textarea, select {
 }
 textarea {
   resize: vertical;
+  height: 6em;
 }
 
 a {
@@ -45,7 +46,7 @@ a:focus {
   outline: none;
 }
 
-button, a.button {
+button.dd-bordered, a.dd-bordered {
   font-size: 1em;
   color: #fff;
   background-color: #5193dd;
@@ -55,76 +56,73 @@ button, a.button {
   border: none;
   cursor: pointer;
 }
-button:hover:not(:disabled) {
+button:hover:not(:disabled).dd-bordered {
   background-image: linear-gradient(rgba(255,255,255,0.14), transparent); 
 }
-button:focus:not(:active) {
+button:focus:not(:active).dd-bordered {
   border: 0.12em solid rgba(0,0,0,0.5);
   padding: 0.58em 1.08em;
 }
-button:disabled {
+button:disabled.dd-bordered {
   background-color: #a9caee;
   border-color: #a9caee;
   cursor: default;
 }
-button:active {
+button:active.dd-bordered {
   border: 0.12em solid rgba(0,0,0,0.2);
   border-bottom-color: rgba(0,0,0,0.05);
   padding: 0.58em 1.08em;
 }
 
-button.secondary {
+button.dd-bordered.secondary {
   color: #5193dd;
   background-color: #fff;
 }
-button.secondary:not(:active) {
+button.dd-bordered.secondary:not(:active) {
   border: 0.06em solid #5193dd;
   padding: 0.64em 1.14em;
 }
-button.secondary:active {
+button.dd-bordered.secondary:active {
   border: 0.12em solid #8db1d9;
   border-bottom-color: #a4c4e9;
   padding: 0.58em 1.08em;
 }
-button.secondary:hover:not(:disabled) {
+button.dd-bordered.secondary:hover:not(:disabled) {
   background-color: #f6f9fd;
 }
-button.secondary:disabled {
+button.dd-bordered.secondary:disabled {
   color: #aacaee;
   border-color: #aacaee;
 }
 
-button.destructive {
+button.dd-bordered.destructive {
   background-color: #dc5053;
 }
-button.destructive:focus:not(:active) {
+button.dd-bordered.destructive:focus:not(:active) {
   border: 0.12em solid #b5111b;
   padding: 0.58em 1.08em;
 }
-button.destructive:disabled {
+button.dd-bordered.destructive:disabled {
   background-color: #eda9aa;
 }
 
-input[type="text"], input[type="number"], textarea {
+input.dd-bordered, textarea.dd-bordered {
   font-size: 1em;
   padding: 0.9em;
   border: 0.06em solid #abbac9;
   border-radius: 0.4em;
 }
-input[type="text"]:focus, input[type="number"]:focus, textarea:focus {
+input.dd-bordered:focus, input.dd-bordered:focus, textarea.dd-bordered:focus {
   border: 0.12em solid #5594dc;
   padding: 0.84em;
   outline: none;
 }
-input[type="text"]:disabled, input[type="number"]:disabled, textarea:disabled{
+input.dd-bordered:disabled, textarea.dd-bordered:disabled{
   background-color: #f4f4f4;
   color: #bfcad5;
 }
-input[type="text"]::placeholder, input[type="number"]::placeholder, textarea::placeholder {
+input.dd-bordered::placeholder, textarea.dd-bordered::placeholder {
   color: #abbac9;
-}
-textarea {
-  height: 6em;
 }
 
 label {

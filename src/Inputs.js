@@ -41,7 +41,7 @@ export class TextInput extends PureComponent {
                   onChange={this.onChange}
                   onFocus={onFocus}
                   onBlur={onBlur}
-                  className={`${maxLength > 0 ? ' with-char-count':''}${icon ? ' with-icon':''}`}
+                  className={`dd-bordered${maxLength > 0 ? ' with-char-count':''}${icon ? ' with-icon':''}`}
                   maxLength={maxLength || null} />
       : <input ref={this.inputRef}
                type="text"
@@ -50,7 +50,7 @@ export class TextInput extends PureComponent {
                onFocus={onFocus}
                onBlur={onBlur}
                onChange={this.onChange}
-               className={`${maxLength > 0 ? ' with-char-count':''}${icon ? ' with-icon':''}`}
+               className={`dd-bordered${maxLength > 0 ? ' with-char-count':''}${icon ? ' with-icon':''}`}
                maxLength={maxLength || null} />
 
     const remaining = maxLength - (value||(this.inputRef.current ? this.inputRef.current.value : '')).length

@@ -27,6 +27,7 @@ import '../src/base.css'
 import {Avatar} from '../src'
 import {TextInput} from '../src'
 import {AttendeeSelector} from '../src'
+import DateTimePicker from '../src/DateTimePicker'
 
 setAddon(JSXAddon)
 
@@ -35,19 +36,19 @@ const attendees = [{firstName:'Jean',lastName:'Valjean'},{firstName:'Cosette',la
 storiesOf('base.css', module)
   .addWithJSX('button', () => <div className="vertical space-children">
     <div className="horizontal space-children">
-      <button>Primary</button>
-      <button disabled>Disabled</button>
-      <pre>button.primary</pre>
+      <button className="dd-bordered">Primary</button>
+      <button className="dd-bordered" disabled>Disabled</button>
+      <pre>button.dd-bordered</pre>
     </div>
     <div className="horizontal space-children">
-      <button className="secondary">Secondary</button>
-      <button className="secondary" disabled>Disabled</button>
-      <pre>button.secondary</pre>
+      <button className="dd-bordered secondary">Secondary</button>
+      <button className="dd-bordered secondary" disabled>Disabled</button>
+      <pre>button.dd-bordered.secondary</pre>
     </div>
     <div className="horizontal space-children">
-      <button className="destructive">Destructive</button>
-      <button className="destructive" disabled>Disabled</button>
-      <pre>button.destructive</pre>
+      <button className="dd-bordered destructive">Destructive</button>
+      <button className="dd-bordered destructive" disabled>Disabled</button>
+      <pre>button.dd-bordered.destructive</pre>
     </div>
   </div>)
   .addWithJSX('Link', () => <div>
@@ -59,29 +60,29 @@ storiesOf('base.css', module)
     <p>See also Components/Inputs</p>
     <label>
       Text field label
-      <input type="text" placeholder="Text field placeholder" />
+      <input className="dd-bordered" type="text" placeholder="Text field placeholder" />
     </label>
     <label>
       Text field label
-      <input type="text" placeholder="Text field placeholder" />
+      <input className="dd-bordered" type="text" placeholder="Text field placeholder" />
       <div className="instructions">Text field specific instructions</div>
     </label>
     <label>
       Text field label
-      <input type="text" placeholder="Text field placeholder" value="Invalid input" />
+      <input className="dd-bordered" type="text" placeholder="Text field placeholder" value="Invalid input" />
       <div className="error">Invalid input ist verboten!</div>
     </label>
     <label>
       Text field label
-      <input type="text" placeholder="Disabled" disabled />
+      <input className="dd-bordered" type="text" placeholder="Disabled" disabled />
     </label>
     <label>
       Text field label
-      <input type="text" placeholder="Search" className="search" />
+      <input type="text" placeholder="Search" className="dd-bordered search" />
     </label>
     <label>
       Text area label
-      <textarea placeholder="Text area placeholder"></textarea>
+      <textarea className="dd-bordered" placeholder="Text area placeholder"></textarea>
     </label>
   </div>)
   .addWithJSX('radio', () => <div className="vertical space-children">
@@ -197,5 +198,15 @@ storiesOf('Components', module)
         onDeselected={a => window.alert(`${JSON.stringify(a)} deselected. onSelected must update state accordingly.`)}
         selected={attendees}
       />
+    </div>
+  </div>)
+  .addWithJSX('DateTimePicker', () => <div className="vertical space-children">
+    <div className="horizontal space-children">
+      <DateTimePicker
+        timeZone="America/New_York"
+        value={new Date('2018-05-01T12:00:00Z')}
+        onChange={date => console.log(`Selected: ${date}`)}
+      />
+      <pre>&lt;DateTimePicker value={`{new Date('2018-05-01T12:00:00Z')}`} timeZone="America/New_York" ... /&gt;</pre>
     </div>
   </div>)

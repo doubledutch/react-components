@@ -14,6 +14,9 @@ Visit the [interactive demo][interactive-demo] powered by
 ```javascript
 import '@doubledutch/react-components/lib/base.css' // Get DoubleDutch standard CSS.
 import {Avatar, TextInput} from '@doubledutch/react-components'
+
+// Not exported directly, due to larger dependencies
+import {DateTimePicker} from '@doubledutch/react-components/DateTimePicker'
 ```
 
 See the live [interactive demo][interactive-demo] for individual components and styles.
