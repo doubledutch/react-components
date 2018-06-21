@@ -46,6 +46,70 @@ a:focus {
   outline: none;
 }
 
+
+.custom-radio {
+  position: relative;
+  padding-left: 2em;
+  cursor: pointer;
+  font-size: 1.2857em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: white;
+}
+
+/* Hide the browser's default radio button */
+.custom-radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.1429em;
+  width: 1.1429em;
+  background-color: white;
+  border-radius: 50%;
+  border: 0.05em solid #4A90E2;
+}
+
+/* On mouse-over, add a grey background color */
+.custom-radio:hover input ~ .checkmark {
+  border: 0.1em solid #4A90E2;
+}
+
+.custom-radio input:disabled ~ .checkmark {
+  opacity: 0.5;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.custom-radio input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.custom-radio .checkmark:after {
+  top: 0.0714em;
+  left: 0.0714em;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background: #4A90E2;
+}
+
+
 button.dd-bordered, a.dd-bordered {
   font-size: 1em;
   color: #fff;
