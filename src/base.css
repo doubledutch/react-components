@@ -75,12 +75,12 @@ a:focus {
   width: 1.1429em;
   background-color: white;
   border-radius: 50%;
-  border: 0.05em solid #4A90E2;
+  border: 0.05em solid #5193dd;
 }
 
 /* On mouse-over, add a grey background color */
 .custom-radio:hover input ~ .checkmark {
-  border: 0.1em solid #4A90E2;
+  border: 0.1em solid #5193dd;
 }
 
 .custom-radio input:disabled ~ .checkmark {

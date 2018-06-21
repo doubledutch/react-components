@@ -90,10 +90,6 @@ storiesOf('base.css', module)
     <label className="custom-radio"><input type="radio" checked={true} name="radio" />Selected <span className="checkmark"/></label>
     <label className="custom-radio"><input type="radio" checked={false} name="radio" disabled />Disabled <span className="checkmark"/></label>
   </div>)
-  .addWithJSX('checkBox', () => <div className="vertical space-children">
-  <label><input type="checkBox" name="my-checkBox" /> Default</label>
-  <label><input type="checkBox" name="my-checkBox" disabled /> Disabled</label>
-  </div>) 
 
 const noFace = {
   firstName: 'Jean',
