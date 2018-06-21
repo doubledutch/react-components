@@ -50,6 +50,29 @@ storiesOf('base.css', module)
       <pre>a</pre>
     </div>
   </div>)
+  .addWithJSX('radio', () => <div className="vertical space-children">
+    <div className="horizontal space-children">
+      <label className="radioContainer">
+          <input type="radio" name="radio" checked={false}/>
+          Radio (Default)
+          <span className="checkmark"/>
+      </label>
+    </div>
+    <div className="horizontal space-children">
+      <label className="radioContainer">
+          <input type="radio" name="radio" checked={true}/>
+          Radio (Checked)
+          <span className="checkmark"/>
+      </label>
+      </div>
+      <div className="horizontal space-children">
+      <label className="radioContainer">
+          <input type="radio" name="radio" disabled={true}/>
+          Radio (Disabled)
+          <span className="checkmark"/>
+      </label>
+    </div>
+  </div>)
 
 const noFace = {
   firstName: 'Jean',
