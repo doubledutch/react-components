@@ -33,7 +33,7 @@ export class TextInput extends PureComponent {
   }
 
   renderInput() {
-    const {children, maxLength, multiline, onBlur, onFocus, placeholder, icon, value} = this.props
+    const {children, maxLength, multiline, onBlur, onFocus, placeholder, icon, value, autoFocus} = this.props
     const renderInputElement = () => multiline
       ? <textarea ref={this.inputRef}
                   placeholder={placeholder}
@@ -41,6 +41,7 @@ export class TextInput extends PureComponent {
                   onChange={this.onChange}
                   onFocus={onFocus}
                   onBlur={onBlur}
+                  autoFocus={autoFocus}
                   className={`dd-bordered${maxLength > 0 ? ' with-char-count':''}${icon ? ' with-icon':''}`}
                   maxLength={maxLength || null} />
       : <input ref={this.inputRef}
@@ -49,6 +50,7 @@ export class TextInput extends PureComponent {
                value={value}
                onFocus={onFocus}
                onBlur={onBlur}
+               autoFocus={autoFocus}
                onChange={this.onChange}
                className={`dd-bordered${maxLength > 0 ? ' with-char-count':''}${icon ? ' with-icon':''}`}
                maxLength={maxLength || null} />
