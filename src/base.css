@@ -132,7 +132,7 @@ label {
   color: #384448;
   padding-bottom: 0.5em;
 }
-label input[type="text"], label textarea {
+label input[type="text"], label input[type="number"], label textarea {
   margin-top: 0.4em;
 }
 label .instructions {
